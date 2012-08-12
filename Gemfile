@@ -22,16 +22,16 @@ end
 
 group :development, :test do
 	gem 'sqlite3', '1.3.6'
+	gem 'rspec-rails', '2.11.0'
+	gem 'guard-rspec', '1.2.1'	
 end
 
 group :test do
-	gem 'autotest-growl', '0.2.16'
-	gem 'cucumber-rails', '1.3.0'
-	gem 'database_cleaner', '0.8.0'
+	gem 'capybara', '1.1.2'
 	gem 'factory_girl_rails', '4.0.0'
-	gem 'rspec-rails', '2.11.0'
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl', '1.0.3'
 	gem 'webrat', '0.7.3'
-	gem 'ZenTest', '4.8.2'
 end
 
 group :production do
