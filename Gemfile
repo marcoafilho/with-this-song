@@ -5,9 +5,7 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
-	gem 'sqlite3', '1.3.6'
-end
+gem 'haml-rails', '0.3.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,12 +17,19 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails', '2.1.1'
+end
+
+group :development do
+	gem 'sqlite3', '1.3.6'
 end
 
 group :test do
 	gem 'autotest-growl', '0.2.16'
-	gem 'cucumber', '1.2.1'
-	gem 'rspec', '2.11.0'
+	gem 'cucumber-rails', '1.3.0'
+	gem 'factory_girl_rails'
+	gem 'rspec-rails', '2.11.0'
+	gem 'webrat', '0.7.3'
 	gem 'ZenTest', '4.8.2'
 end
 
