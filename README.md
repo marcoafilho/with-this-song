@@ -3,6 +3,8 @@ With this song [![Build Status][travis_logo]](http://travis-ci.org/marcoafilho/w
 
 Readme about this app, coming soon.
 
+[travis_logo]:  https://secure.travis-ci.org/marcoafilho/ai-mindbreaker.png?branch=master
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
