@@ -20,14 +20,15 @@ group :assets do
   gem 'twitter-bootstrap-rails', '2.1.1'
 end
 
-group :development do
+group :development, :test do
 	gem 'sqlite3', '1.3.6'
 end
 
 group :test do
 	gem 'autotest-growl', '0.2.16'
 	gem 'cucumber-rails', '1.3.0'
-	gem 'factory_girl_rails'
+	gem 'database_cleaner', '0.8.0'
+	gem 'factory_girl_rails', '4.0.0'
 	gem 'rspec-rails', '2.11.0'
 	gem 'webrat', '0.7.3'
 	gem 'ZenTest', '4.8.2'
