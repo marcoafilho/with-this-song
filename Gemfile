@@ -24,7 +24,7 @@ end
 group :test do
 	gem 'autotest-growl', '0.2.16'
 	gem 'cucumber', '1.2.1'
-	gem 'rspec', '2.11.1'
+	gem 'rspec', '2.11.0'
 	gem 'ZenTest', '4.8.2'
 end
 
