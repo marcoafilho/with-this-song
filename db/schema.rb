@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120813023902) do
+ActiveRecord::Schema.define(:version => 20120813032630) do
+
+  create_table "artist_songs", :force => true do |t|
+    t.integer  "artist_id"
+    t.integer  "song_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "artist_songs", ["artist_id"], :name => "index_artist_songs_on_artist_id"
+  add_index "artist_songs", ["song_id"], :name => "index_artist_songs_on_song_id"
 
   create_table "artists", :force => true do |t|
     t.string   "name"
@@ -29,5 +39,22 @@ ActiveRecord::Schema.define(:version => 20120813023902) do
   end
 
   add_index "genres", ["name"], :name => "index_genres_on_name", :unique => true
+
+  create_table "song_genres", :force => true do |t|
+    t.integer  "song_id"
+    t.integer  "genre_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "song_genres", ["genre_id"], :name => "index_song_genres_on_genre_id"
+  add_index "song_genres", ["song_id"], :name => "index_song_genres_on_song_id"
+
+  create_table "songs", :force => true do |t|
+    t.string   "title"
+    t.string   "album"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

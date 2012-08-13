@@ -36,3 +36,20 @@ en:
       update: 'Update'
     update:
       success: 'Genre successfully updated.'
+  songs:
+    index:
+      title: 'Songs'
+      confirm: 'You sure?'
+      delete: 'Delete'
+      edit: 'Edit'
+      new: 'New song'
+    new:
+      title: 'New song'
+      create: 'Create'
+    create:
+      success: 'Song successfully created.'
+    edit:
+      title: 'Edit song'
+      update: 'Update'
+    update:
+      success: 'Song successfully updated.'

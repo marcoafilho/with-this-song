@@ -1,0 +1,36 @@
+%h3
+  = t ".title"
+%table.table.table-striped
+  %tr
+    %thead
+      %th
+        %span.icon-music
+        Title
+      %th
+        %span.icon-user
+        Artist
+      %th
+        %span.icon-book
+        Album
+      %th
+        %span.icon-tags
+        Genre
+      %th
+        %span.icon-wrench
+        Actions
+    %tbody
+    - @songs.each do |song|
+      %tr
+        %td
+          = song.title
+        %td
+          = song.format_artists
+        %td
+          = song.album
+        %td
+          = song.genres.collect(&:name).join("; ")
+        %td
+          = link_to t('.edit'), edit_song_path(song), class: "btn btn-mini"
+          = link_to t('.delete'), song, method: :delete, confirm: t('.confirm'), class: "btn btn-mini btn-danger"
+
+= link_to t('.new'), new_song_path
