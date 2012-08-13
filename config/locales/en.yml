@@ -19,3 +19,20 @@ en:
       update: 'Update'
     update:
       success: 'Artist successfully updated.'
+  genres:
+    index:
+      title: 'Genres'
+      confirm: 'You sure?'
+      delete: 'Delete'
+      edit: 'Edit'
+      new: 'New artist'
+    new:
+      title: 'New genre'
+      create: 'Create'
+    create:
+      success: 'Genre successfully created.'
+    edit:
+      title: 'Edit genre'
+      update: 'Update'
+    update:
+      success: 'Genre successfully updated.'

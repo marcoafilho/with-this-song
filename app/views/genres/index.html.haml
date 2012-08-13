@@ -1,0 +1,22 @@
+%h3
+  = t ".title"
+%table
+  %tr
+    %th
+      Name
+    %th
+      Description
+    %th
+      Actions
+  - @genres.each do |genre|
+    %tr
+      %td
+        = genre.name
+      %td
+        = genre.description
+      %td
+        = link_to t('.edit'), edit_genre_path(genre)
+        |
+        = link_to t('.delete'), genre, method: :delete, confirm: t('.confirm')
+
+= link_to t('.new'), new_genre_path
