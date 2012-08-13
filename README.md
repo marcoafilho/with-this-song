@@ -22,7 +22,9 @@ see the application working.
 
 As for the test environment two main gems are being used: [RSpec][rspec_url] 
 and [Capybara][capybara_url]. The first one is used for the unit and 
-functional tests and the latest is used for behaviour test.
+functional tests and both are used for behavioural tests. 
+[Travis Continuous Integration][travis_url] is the platform used to build new 
+instances of the application and verify if the code is working accordingly.
 
 The methodology used to write this application is the Behaviour Driven 
 Development. When new features are created first it's designed the expected 
@@ -32,6 +34,7 @@ behaviour of the application and afterwards the code is written.
 [capybara_url]: https://github.com/jnicklas/capybara/
 [heroku_url]: http://www.heroku.com/
 [rspec_url]: http://rspec.info/
+[travis_url]: http://travis-ci.org/marcoafilho/with-this-song
 
 Usage
 -----

@@ -2,4 +2,20 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  artists:
+    index:
+      title: 'Artists'
+      confirm: 'You sure?'
+      delete: 'Delete'
+      edit: 'Edit'
+      new: 'New artist'
+    new:
+      title: 'New artist'
+      create: 'Create'
+    create:
+      success: 'Artist successfully created.'
+    edit:
+      title: 'Edit artist'
+      update: 'Update'
+    update:
+      success: 'Artist successfully updated.'

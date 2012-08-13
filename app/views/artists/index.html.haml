@@ -1,0 +1,18 @@
+%h3
+  = t ".title"
+%table
+  %tr
+    %th
+      Name
+    %th
+      Actions
+  - @artists.each do |artist|
+    %tr
+      %td
+        = artist.name
+      %td
+        = link_to t('.edit'), edit_artist_path(artist)
+        |
+        = link_to t('.delete'), artist, method: :delete, confirm: t('.confirm')
+
+= link_to t('.new'), new_artist_path
