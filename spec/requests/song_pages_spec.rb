@@ -20,7 +20,7 @@ describe "Song pages" do
         visit songs_path
       end
 
-      it { should have_link('Delete', href: song_path(Song.first)) }
+      it { should have_link('Delete', href: song_path(Song.ordered_by_artist.first)) }
     end
     
     describe "pagination" do
@@ -28,7 +28,7 @@ describe "Song pages" do
       it { should have_selector('div.pagination') }
 
       it "should list each song genre sorted by name" do
-        Song.paginate(page: 1).each do |song|
+        Song.ordered_by_artist.paginate(page: 1).each do |song|
           page.should have_selector('td', text: song.title)
         end
       end

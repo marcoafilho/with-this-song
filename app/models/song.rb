@@ -17,7 +17,7 @@ class Song < ActiveRecord::Base
   
   attr_accessible :album, :title, :interpreter_ids, :genre_ids
   
-  scope :ordered_by_artist, joins(:interpreters).order("artists.name").group(:title, :album)
+  scope :ordered_by_artist, includes(:interpreters).order("artists.name").group(:title, :album)
   
   validates :title, presence: true
   
