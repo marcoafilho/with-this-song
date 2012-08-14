@@ -1,9 +1,12 @@
 class SongsController < ApplicationController
   def index
-    @songs = Song.ordered_by_artist.paginate(page: params[:page])
+    @songs = Song.order(:title).paginate(page: params[:page])
   end
 
   def show
+    @song = Song.find(params[:id])
+
+    render json: @song
   end
 
   def new
