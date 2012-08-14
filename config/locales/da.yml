@@ -1,1 +1,82 @@
 da:
+  common:
+    actions: "Actions"
+    languages:
+      full:
+        da: "Danish"
+        en: "English"
+        es: "Spanish"
+        fr: "French"
+        pt_br: "Portuguese"
+    "yes": "Yes"
+    "no": "No"        
+  artist:
+    name: "Name"
+  genre:
+    name: "Name"
+    description: "Description"
+  song:
+    title: "Title"
+    interpreters: "Interpreters"
+    album: "Album"
+    genres: "Genres"
+  artists:
+    index:
+      title: 'Artists'
+      confirm: 'You sure?'
+      delete: 'Delete'
+      edit: 'Edit'
+      new: 'New artist'
+    new:
+      title: 'New artist'
+      create: 'Create'
+    create:
+      success: 'Artist successfully created.'
+    edit:
+      title: 'Edit artist'
+      update: 'Update'
+    update:
+      success: 'Artist successfully updated.'
+  genres:
+    index:
+      title: 'Genres'
+      confirm: 'You sure?'
+      delete: 'Delete'
+      edit: 'Edit'
+      new: 'New artist'
+    new:
+      title: 'New genre'
+      create: 'Create'
+    create:
+      success: 'Genre successfully created.'
+    edit:
+      title: 'Edit genre'
+      update: 'Update'
+    update:
+      success: 'Genre successfully updated.'
+  songs:
+    index:
+      title: 'Songs'
+      confirm: 'You sure?'
+      delete: 'Delete'
+      edit: 'Edit'
+      new: 'New song'
+    new:
+      title: 'New song'
+      create: 'Create'
+    create:
+      success: 'Song successfully created.'
+    edit:
+      title: 'Edit song'
+      update: 'Update'
+    update:
+      success: 'Song successfully updated.'
+  navbar:
+    songs: "Songs"
+    genres: "Genres"
+    artists: "Artists"
+    locales: "Languages"
+  popup:
+    delete: "Deleting record"
+    warning: "You're doing an action that is irreversible."
+    confirmation: "Are you sure you want to remove?"
