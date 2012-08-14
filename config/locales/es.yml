@@ -77,20 +77,24 @@ es:
     delete: "Eliminación de registro"
     warning: "Estás haciendo una acción irreversible."
     confirmation: "¿Estás seguro?"
-    activerecord:
-      errors:
-        models:
-          artist:
-            attributes:
-              name:
-                blank: "no puede estar en blanco"
-                taken: "ya se ha dado"
-          genre:
-            attributes:
-              name:
-                blank: "no puede estar en blanco"
-                taken: "ya se ha dado"
-          song:
-            attributes:
-              name:
-                blank: "no puede estar en blanco"
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Siguiente &#8594;"
+    page_gap: "&hellip;"
+  activerecord:
+    errors:
+      models:
+        artist:
+          attributes:
+            name:
+              blank: "no puede estar en blanco"
+              taken: "ya se ha dado"
+        genre:
+          attributes:
+            name:
+              blank: "no puede estar en blanco"
+              taken: "ya se ha dado"
+        song:
+          attributes:
+            name:
+              blank: "no puede estar en blanco"
