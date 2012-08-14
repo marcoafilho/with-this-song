@@ -6,12 +6,24 @@
         %li{ class: "#{active_controller?("songs") ? "active" : ""}" }
           %a{ href: songs_url }
             %span.icon-music.icon-white
-            =t(".songs")
+            =t("navbar.songs")
         %li{ class: "#{active_controller?("genres") ? "active" : ""}" }
           %a{ href: genres_url }
             %span.icon-tags.icon-white
-            =t(".genres")
+            =t("navbar.genres")
         %li{ class: "#{active_controller?("artists") ? "active" : ""}" }
           %a{ href: artists_url }
             %span.icon-user.icon-white
-            =t(".artists")
+            =t("navbar.artists")
+      %ul.nav.pull-right
+        %li.divider-vertical
+        %li.dropdown
+          %a.dropdown-toggle
+            %span.icon-globe.icon-white
+            =t("navbar.locales")
+          %ul.dropdown-menu
+            - I18n.available_locales.each do |locale|
+              %li
+                = link_to t("common.languages.full.#{locale.to_s}"), request.parameters.merge({ locale: locale })
+                  
+          

@@ -6,19 +6,19 @@
     %tr
       %th.span3
         %span.icon-music
-        Title
+        = t('song.title')
       %th.span3
         %span.icon-user
-        Artist
+        = t('song.interpreters')
       %th.span2
         %span.icon-book
-        Album
+        = t('song.album')
       %th.span2
         %span.icon-tags
-        Genre
+        = t('song.genres')
       %th.span2
         %span.icon-wrench
-        Actions
+        = t('common.actions')
   %tbody
   - @songs.each do |song|
     %tr

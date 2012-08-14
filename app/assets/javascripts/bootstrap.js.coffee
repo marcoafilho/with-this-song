@@ -12,3 +12,4 @@ jQuery ->
     e.preventDefault();
     href = $(this).attr('href');
     $('#modal-from-dom').data('href', href).modal('show');
+  $('.dropdown-toggle').dropdown()

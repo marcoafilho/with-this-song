@@ -1,0 +1,79 @@
+pt_br:
+  common:
+    actions: "Ações"
+    languages:
+      full:
+        da: "Dinamarquês"
+        en: "Inglês"
+        es: "Espanhol"
+        fr: "Frânces"
+        pt_br: "Português"
+    yes: "Sim"
+    nonsense: "Não"
+  artist:
+    name: "Nome"
+  genre:
+    name: "Nome"
+    description: "Descrição"
+  song:
+    title: "Título"
+    interpreters: "Artista"
+    album: "Álbum"
+    genres: "Gênero"
+  artists:
+    index:
+      title: 'Artistas'
+      delete: 'Excluir'
+      edit: 'Editar'
+      new: 'Novo artista'
+    new:
+      title: 'Novo artista'
+      create: 'Criar'
+    create:
+      success: 'Artista criada com sucesso.'
+    edit:
+      title: 'Editar artista'
+      update: 'Atualizar'
+    update:
+      success: 'Artista atualizado com sucesso.'
+  genres:
+    index:
+      title: 'Gêneros'
+      delete: 'Excluir'
+      edit: 'Editar'
+      new: 'Novo artista'
+    new:
+      title: 'Novo gênero'
+      create: 'Criar'
+    create:
+      success: 'Gênere criado com sucesso.'
+    edit:
+      title: 'Editar gênero'
+      update: 'Atualizar'
+    update:
+      success: 'Gênero atualizado com sucesso.'
+  songs:
+    index:
+      title: 'Músicas'
+      delete: 'Excluir'
+      edit: 'Editar'
+      new: 'Nova música'
+    new:
+      title: 'Nova música'
+      create: 'Criar'
+    create:
+      success: 'Música atualizada com sucesso.'
+    edit:
+      title: 'Editar música'
+      update: 'Atualizar'
+    update:
+      success: 'Música atualizada com sucesso.'
+  navbar:
+    songs: "Músicas"
+    genres: "Gêneros"
+    artists: "Artistas"
+    locales: "Línguas"
+  popup:
+    delete: "Exclusão de registro"
+    warning: "Você está executando uma tarefa irreversível."
+    confirmation: "Tem certeza de que deseja remover o registro?"

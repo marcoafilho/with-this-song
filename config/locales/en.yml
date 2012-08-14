@@ -2,6 +2,17 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  common:
+    actions: "Actions"
+    languages:
+      full:
+        da: "Danish"
+        en: "English"
+        es: "Spanish"
+        fr: "French"
+        pt_br: "Portuguese"
+    yes: "Yes"
+    no: "No"        
   artist:
     name: "Name"
   genre:
@@ -63,3 +74,12 @@ en:
       update: 'Update'
     update:
       success: 'Song successfully updated.'
+  navbar:
+    songs: "Songs"
+    genres: "Genres"
+    artists: "Artists"
+    locales: "Languages"
+  popup:
+    delete: "Deleting record"
+    warning: "You're doing an action that is irreversible."
+    confirmation: "Are you sure you want to remove?"
