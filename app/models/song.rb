@@ -17,7 +17,11 @@ class Song < ActiveRecord::Base
   
   attr_accessible :album, :title, :interpreter_ids, :genre_ids
   
+  scope :ordered_by_artist, joins(:interpreters).order("artists.name").group(:title, :album)
+  
   validates :title, presence: true
+  
+  self.per_page = 15
   
   def format_artists
     if interpreters.count == 0

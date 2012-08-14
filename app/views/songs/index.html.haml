@@ -34,4 +34,6 @@
         = link_to t('.edit'), edit_song_path(song), class: "btn btn-mini"
         = link_to t('.delete'), song, class: "btn btn-mini btn-danger confirm-delete"
 
+= will_paginate
+
 = link_to t('.new'), new_song_path, class: "btn btn-primary"

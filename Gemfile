@@ -6,6 +6,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'haml-rails', '0.3.4'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.7'
 
 # Gems used only for assets and not required
 # in production environments by default.

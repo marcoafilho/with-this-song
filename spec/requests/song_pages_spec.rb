@@ -4,7 +4,7 @@ describe "Song pages" do
   subject { page }
 
   describe "index" do
-    before(:all) { 10.times { FactoryGirl.create(:song) } }
+    before(:all) { 20.times { FactoryGirl.create(:song) } }
     after(:all) {Song.delete_all}
 
     before(:each) do
@@ -12,12 +12,6 @@ describe "Song pages" do
     end
 
     it { should have_selector('h1', text: "Songs") }
-
-    it "should list all songs" do
-      Song.all.each do |song|
-        page.should have_selector('td', text: song.title)
-      end
-    end
 
     describe "delete" do
       let(:song) { FactoryGirl.create(:song) }
@@ -27,6 +21,17 @@ describe "Song pages" do
       end
 
       it { should have_link('Delete', href: song_path(Song.first)) }
+    end
+    
+    describe "pagination" do
+
+      it { should have_selector('div.pagination') }
+
+      it "should list each song genre sorted by name" do
+        Song.paginate(page: 1).each do |song|
+          page.should have_selector('td', text: song.title)
+        end
+      end
     end
   end
 

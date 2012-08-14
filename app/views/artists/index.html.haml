@@ -19,4 +19,6 @@
         = link_to t('.edit'), edit_artist_path(artist), class: "btn btn-mini"
         = link_to t('.delete'), artist, class: "btn btn-mini btn-danger confirm-delete"
 
+= will_paginate
+
 = link_to t('.new'), new_artist_path, class: "btn btn-primary"

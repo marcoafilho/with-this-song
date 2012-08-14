@@ -4,7 +4,7 @@ describe "Genre pages" do
   subject { page }
 
   describe "index" do
-    before(:all) { 10.times { FactoryGirl.create(:genre) } }
+    before(:all) { 20.times { FactoryGirl.create(:genre) } }
     after(:all) {Genre.delete_all}
 
     before(:each) do
@@ -12,12 +12,6 @@ describe "Genre pages" do
     end
 
     it { should have_selector('h1', text: "Genres") }
-
-    it "should list all genres" do
-      Genre.all.each do |genre|
-        page.should have_selector('td', text: genre.name)
-      end
-    end
 
     describe "delete" do
       let(:genre) { FactoryGirl.create(:genre) }
@@ -27,6 +21,17 @@ describe "Genre pages" do
       end
 
       it { should have_link('Delete', href: genre_path(Genre.first)) }
+    end
+    
+    describe "pagination" do
+
+      it { should have_selector('div.pagination') }
+
+      it "should list each genre sorted by name" do
+        Genre.order(:name).paginate(page: 1).each do |genre|
+          page.should have_selector('td', text: genre.name)
+        end
+      end
     end
   end
 
