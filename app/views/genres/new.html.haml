@@ -1,10 +1,8 @@
-%h3
-  = t('.title')
-  
-= form_for(@genre) do |f|
-  = render "shared/error_messages", :object => f.object
-  = f.label :name
-  = f.text_field :name
-  = f.label :description
-  = f.text_area :description
-  = f.submit t('.create')
+= form_for @genre, html: { class: "form-horizontal" } do |f|
+  %fieldset
+    %legend
+      = t('.title')
+    = render "form", form: f
+    .form-actions    
+      = f.submit t('.create'), class: "btn btn-primary"
+      = link_to "Cancel", genres_path, class: "btn"

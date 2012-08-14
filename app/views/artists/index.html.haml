@@ -1,18 +1,22 @@
-%h3
-  = t ".title"
-%table
-  %tr
-    %th
-      Name
-    %th
-      Actions
+.page-header
+  %h1
+    = t ".title"
+%table.table.table-striped
+  %thead
+    %tr
+      %th.span10
+        %span.icon-user
+        Name
+      %th.span2
+        %span.icon-wrench
+        Actions
+  %tbody
   - @artists.each do |artist|
     %tr
       %td
         = artist.name
       %td
-        = link_to t('.edit'), edit_artist_path(artist)
-        |
-        = link_to t('.delete'), artist, method: :delete, confirm: t('.confirm')
+        = link_to t('.edit'), edit_artist_path(artist), class: "btn btn-mini"
+        = link_to t('.delete'), artist, class: "btn btn-mini btn-danger confirm-delete"
 
-= link_to t('.new'), new_artist_path
+= link_to t('.new'), new_artist_path, class: "btn btn-primary"

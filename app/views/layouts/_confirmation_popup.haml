@@ -1,0 +1,14 @@
+#modal-from-dom{ class: "modal hide fade" }
+  .modal-header
+    %a{ href: "#", class: "close" }
+      &times;
+    %h3
+      = t('popup.delete')
+  .modal-body
+    %p
+      = t('popup.warning')
+    %p
+      = t('popup.confirmation')
+  .modal-footer
+    = link_to t('popup.yes'), "#", method: :delete, class: "btn btn-danger"
+    = link_to t('popup.no'), "javascript:$('#modal-from-dom').modal('hide')", class: "btn btn-secondary"

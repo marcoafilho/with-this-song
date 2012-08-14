@@ -11,7 +11,7 @@ describe "Artist pages" do
       visit artists_path
     end
     
-    it { should have_selector('h3', text: "Artists") }
+    it { should have_selector('h1', text: "Artists") }
     
     it "should list all artists" do
       Artist.all.each do |artist|
@@ -27,9 +27,6 @@ describe "Artist pages" do
       end
 
       it { should have_link('Delete', href: artist_path(Artist.first)) }
-      it "should be able to delete artist" do
-        expect { click_link('Delete') }.to change(Artist, :count).by(-1)
-      end
     end
   end
   
@@ -38,7 +35,7 @@ describe "Artist pages" do
     
     before { visit new_artist_path }
     
-    it { should have_selector('h3', text: "New artist") }
+    it { should have_selector('legend', text: "New artist") }
     
     describe "with invalid information" do
       it "should not create a user" do
@@ -48,7 +45,7 @@ describe "Artist pages" do
       describe "after submission" do
         before { click_button submit }
         
-        it { should have_selector('h3', text: "New artist") }
+        it { should have_selector('legend', text: "New artist") }
         it { should have_content('error') }
       end
     end
@@ -65,7 +62,7 @@ describe "Artist pages" do
       describe "after saving a user" do
         before { click_button submit }
         
-        it { should have_selector('h3', text: "Artists") }
+        it { should have_selector('h1', text: "Artists") }
         it { should have_selector('div.alert.alert-success') }
       end
     end
@@ -79,7 +76,7 @@ describe "Artist pages" do
       visit edit_artist_path(artist)
     end
     
-    it { should have_selector('h3', text: "Edit artist") }
+    it { should have_selector('legend', text: "Edit artist") }
      
     describe "with invalid information" do
       before do
@@ -98,7 +95,7 @@ describe "Artist pages" do
         click_button submit
       end
       
-      it { should have_selector('h3', text: "Artists") }
+      it { should have_selector('h1', text: "Artists") }
       it { should have_selector('div.alert.alert-success') }
     end
   end

@@ -11,7 +11,7 @@ describe "Song pages" do
       visit songs_path
     end
 
-    it { should have_selector('h3', text: "Songs") }
+    it { should have_selector('h1', text: "Songs") }
 
     it "should list all songs" do
       Song.all.each do |song|
@@ -27,9 +27,6 @@ describe "Song pages" do
       end
 
       it { should have_link('Delete', href: song_path(Song.first)) }
-      it "should be able to delete song" do
-        expect { click_link('Delete') }.to change(Song, :count).by(-1)
-      end
     end
   end
 
@@ -38,7 +35,7 @@ describe "Song pages" do
 
     before { visit new_song_path }
 
-    it { should have_selector('h3', text: "New song") }
+    it { should have_selector('legend', text: "New song") }
 
     describe "with invalid information" do
       it "should not create a user" do
@@ -48,7 +45,7 @@ describe "Song pages" do
       describe "after submission" do
         before { click_button submit }
 
-        it { should have_selector('h3', text: "New song") }
+        it { should have_selector('legend', text: "New song") }
         it { should have_content('error') }
       end
     end
@@ -66,7 +63,7 @@ describe "Song pages" do
       describe "after saving a user" do
         before { click_button submit }
 
-        it { should have_selector('h3', text: "Songs") }
+        it { should have_selector('h1', text: "Songs") }
         it { should have_selector('div.alert.alert-success') }
       end
     end
@@ -80,7 +77,7 @@ describe "Song pages" do
       visit edit_song_path(song)
     end
 
-    it { should have_selector('h3', text: "Edit song") }
+    it { should have_selector('legend', text: "Edit song") }
 
     describe "with invalid information" do
       before do
@@ -101,7 +98,7 @@ describe "Song pages" do
         click_button submit
       end
 
-      it { should have_selector('h3', text: "Songs") }
+      it { should have_selector('h1', text: "Songs") }
       it { should have_selector('div.alert.alert-success') }
     end
   end

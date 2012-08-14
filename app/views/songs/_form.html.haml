@@ -1,0 +1,24 @@
+= render "shared/error_messages", object: form.object
+= control_group form, :title do
+  = form.label :title, "* #{t('song.title')}", class: "control-label"
+  .controls
+    = form.text_field :title, class: "input-xlarge"
+    = error_messages(form, :title)
+= control_group form, :interpreter_ids do
+  = form.label :interpreter_ids, t('song.interpreters'), class: "control-label"
+  .controls
+    = form.select :interpreter_ids, artist_list(Artist.all), { prompt: "Please Select" }, { multiple: true, size: 5, class: "input-xlarge" }
+    = error_messages(form, :interpreter_ids)
+= control_group form, :album do
+  = form.label :album, t('song.album'), class: "control-label"
+  .controls
+    = form.text_field :album, class: "input-xlarge"
+    = error_messages(form, :album)
+= control_group form, :genre_ids do
+  = form.label :genre_ids, t('song.genres'), class: "control-label"
+  .controls      
+    - Genre.all.each do |genre|
+      %label.checkbox.inline
+        = check_box_tag "song[genre_ids][]", genre.id, @song.genres.include?(genre)
+        = genre.name
+    = error_messages(form, :genre_ids)

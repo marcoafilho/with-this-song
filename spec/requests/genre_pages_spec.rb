@@ -11,7 +11,7 @@ describe "Genre pages" do
       visit genres_path
     end
 
-    it { should have_selector('h3', text: "Genres") }
+    it { should have_selector('h1', text: "Genres") }
 
     it "should list all genres" do
       Genre.all.each do |genre|
@@ -27,9 +27,6 @@ describe "Genre pages" do
       end
 
       it { should have_link('Delete', href: genre_path(Genre.first)) }
-      it "should be able to delete genre" do
-        expect { click_link('Delete') }.to change(Genre, :count).by(-1)
-      end
     end
   end
 
@@ -38,7 +35,7 @@ describe "Genre pages" do
 
     before { visit new_genre_path }
 
-    it { should have_selector('h3', text: "New genre") }
+    it { should have_selector('legend', text: "New genre") }
 
     describe "with invalid information" do
       it "should not create a user" do
@@ -48,7 +45,7 @@ describe "Genre pages" do
       describe "after submission" do
         before { click_button submit }
 
-        it { should have_selector('h3', text: "New genre") }
+        it { should have_selector('legend', text: "New genre") }
         it { should have_content('error') }
       end
     end
@@ -66,7 +63,7 @@ describe "Genre pages" do
       describe "after saving a user" do
         before { click_button submit }
 
-        it { should have_selector('h3', text: "Genres") }
+        it { should have_selector('h1', text: "Genres") }
         it { should have_selector('div.alert.alert-success') }
       end
     end
@@ -80,7 +77,7 @@ describe "Genre pages" do
       visit edit_genre_path(genre)
     end
 
-    it { should have_selector('h3', text: "Edit genre") }
+    it { should have_selector('legend', text: "Edit genre") }
 
     describe "with invalid information" do
       before do
@@ -101,7 +98,7 @@ describe "Genre pages" do
         click_button submit
       end
 
-      it { should have_selector('h3', text: "Genres") }
+      it { should have_selector('h1', text: "Genres") }
       it { should have_selector('div.alert.alert-success') }
     end
   end

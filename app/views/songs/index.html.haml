@@ -1,36 +1,37 @@
-%h3
-  = t ".title"
+.page-header
+  %h1
+    = t ".title"
 %table.table.table-striped
-  %tr
-    %thead
-      %th
+  %thead
+    %tr
+      %th.span3
         %span.icon-music
         Title
-      %th
+      %th.span3
         %span.icon-user
         Artist
-      %th
+      %th.span2
         %span.icon-book
         Album
-      %th
+      %th.span2
         %span.icon-tags
         Genre
-      %th
+      %th.span2
         %span.icon-wrench
         Actions
-    %tbody
-    - @songs.each do |song|
-      %tr
-        %td
-          = song.title
-        %td
-          = song.format_artists
-        %td
-          = song.album
-        %td
-          = song.genres.collect(&:name).join("; ")
-        %td
-          = link_to t('.edit'), edit_song_path(song), class: "btn btn-mini"
-          = link_to t('.delete'), song, method: :delete, confirm: t('.confirm'), class: "btn btn-mini btn-danger"
+  %tbody
+  - @songs.each do |song|
+    %tr
+      %td
+        = song.title
+      %td
+        = song.format_artists
+      %td
+        = song.album
+      %td
+        = song.genres.collect(&:name).join("; ")
+      %td
+        = link_to t('.edit'), edit_song_path(song), class: "btn btn-mini"
+        = link_to t('.delete'), song, class: "btn btn-mini btn-danger confirm-delete"
 
-= link_to t('.new'), new_song_path
+= link_to t('.new'), new_song_path, class: "btn btn-primary"

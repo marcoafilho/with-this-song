@@ -1,13 +1,19 @@
-%h3
-  = t ".title"
-%table
-  %tr
-    %th
-      Name
-    %th
-      Description
-    %th
-      Actions
+.page-header
+  %h1
+    = t ".title"
+%table.table.table-striped
+  %thead
+    %tr
+      %th.span3
+        %span.icon-tags
+        Name
+      %th.span7
+        %span.icon-align-justify
+        Description
+      %th.span2
+        %span.icon-wrench
+        Actions
+  %tbody
   - @genres.each do |genre|
     %tr
       %td
@@ -15,8 +21,7 @@
       %td
         = genre.description
       %td
-        = link_to t('.edit'), edit_genre_path(genre)
-        |
-        = link_to t('.delete'), genre, method: :delete, confirm: t('.confirm')
+        = link_to t('.edit'), edit_genre_path(genre), class: "btn btn-mini"
+        = link_to t('.delete'), genre, class: "btn btn-mini btn-danger confirm-delete"
 
-= link_to t('.new'), new_genre_path
+= link_to t('.new'), new_genre_path, class: "btn btn-primary"

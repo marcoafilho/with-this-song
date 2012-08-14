@@ -2,6 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  artist:
+    name: "Name"
+  genre:
+    name: "Name"
+    description: "Description"
+  song:
+    title: "Title"
+    interpreters: "Interpreters"
+    album: "Album"
+    genres: "Genres"
   artists:
     index:
       title: 'Artists'
