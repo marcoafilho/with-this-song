@@ -12,7 +12,8 @@ en:
         fr: "French"
         pt_br: "Portuguese"
     "yes": "Yes"
-    "no": "No"        
+    "no": "No"  
+    select_artist: 'Pick an artist'      
   artist:
     name: "Name"
   genre:
@@ -33,11 +34,13 @@ en:
     new:
       title: 'New artist'
       create: 'Create'
+      cancel: "Cancel"
     create:
       success: 'Artist successfully created.'
     edit:
       title: 'Edit artist'
       update: 'Update'
+      cancel: "Cancel"
     update:
       success: 'Artist successfully updated.'
   genres:
@@ -46,15 +49,17 @@ en:
       confirm: 'You sure?'
       delete: 'Delete'
       edit: 'Edit'
-      new: 'New artist'
+      new: 'New genre'
     new:
       title: 'New genre'
       create: 'Create'
+      cancel: "Cancel"
     create:
       success: 'Genre successfully created.'
     edit:
       title: 'Edit genre'
       update: 'Update'
+      cancel: "Cancel"
     update:
       success: 'Genre successfully updated.'
   songs:
@@ -67,11 +72,13 @@ en:
     new:
       title: 'New song'
       create: 'Create'
+      cancel: "Cancel"
     create:
       success: 'Song successfully created.'
     edit:
       title: 'Edit song'
       update: 'Update'
+      cancel: "Cancel"
     update:
       success: 'Song successfully updated.'
   navbar:

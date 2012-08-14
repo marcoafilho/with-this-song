@@ -5,4 +5,4 @@
     = render "form", form: f
     .form-actions    
       = f.submit t('.update'), class: "btn btn-primary"
-      = link_to "Cancel", root_path, class: "btn"
+      = link_to t('.cancel'), root_path, class: "btn"

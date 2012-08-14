@@ -7,7 +7,7 @@
 = control_group form, :interpreter_ids do
   = form.label :interpreter_ids, t('song.interpreters'), class: "control-label"
   .controls
-    = form.select :interpreter_ids, artist_list(Artist.order(:name).all), { prompt: "Please Select" }, { multiple: true, size: 5, class: "input-xlarge" }
+    = form.select :interpreter_ids, artist_list(Artist.order(:name).all), { prompt: t('common.select_artist') }, { multiple: true, size: 5, class: "input-xlarge" }
     = error_messages(form, :interpreter_ids)
 = control_group form, :album do
   = form.label :album, t('song.album'), class: "control-label"

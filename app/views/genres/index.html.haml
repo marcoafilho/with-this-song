@@ -6,13 +6,13 @@
     %tr
       %th.span3
         %span.icon-tags
-        Name
+        = t('genre.name')
       %th.span7
         %span.icon-align-justify
-        Description
+        = t('genre.description')
       %th.span2
         %span.icon-wrench
-        Actions
+        = t('common.actions')
   %tbody
   - @genres.each do |genre|
     %tr

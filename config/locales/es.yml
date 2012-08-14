@@ -1,82 +1,96 @@
 es:
   common:
-    actions: "Actions"
+    actions: "Acciones"
     languages:
       full:
-        da: "Danish"
-        en: "English"
-        es: "Spanish"
-        fr: "French"
-        pt_br: "Portuguese"
-    "yes": "Yes"
+        da: "Danés"
+        en: "Inglés"
+        es: "Español"
+        fr: "Francés"
+        pt_br: "Portugués"
+    "yes": "Sí"
     "no": "No"        
   artist:
-    name: "Name"
+    name: "Nombre"
   genre:
-    name: "Name"
-    description: "Description"
+    name: "Nombre"
+    description: "Descripción"
   song:
-    title: "Title"
-    interpreters: "Interpreters"
+    title: "Título"
+    interpreters: "Intérpretes"
     album: "Album"
-    genres: "Genres"
+    genres: "Géneros"
   artists:
     index:
-      title: 'Artists'
-      confirm: 'You sure?'
-      delete: 'Delete'
-      edit: 'Edit'
-      new: 'New artist'
+      title: 'Cantantes'
+      delete: 'Borrar'
+      edit: 'Editar'
+      new: 'Nuevo cantante'
     new:
-      title: 'New artist'
-      create: 'Create'
+      title: 'Nuevo cantante'
+      create: 'Crear'
     create:
-      success: 'Artist successfully created.'
+      success: 'Cantante se ha creado con éxito.'
     edit:
-      title: 'Edit artist'
-      update: 'Update'
+      title: 'Editar cantante'
+      update: 'Actualizar'
     update:
-      success: 'Artist successfully updated.'
+      success: 'Cantante se ha actualizado con éxito.'
   genres:
     index:
-      title: 'Genres'
-      confirm: 'You sure?'
-      delete: 'Delete'
-      edit: 'Edit'
-      new: 'New artist'
+      title: 'Géneros'
+      delete: 'Borrar'
+      edit: 'Editar'
+      new: 'Nuevo cantante'
     new:
-      title: 'New genre'
-      create: 'Create'
+      title: 'Nuevo género'
+      create: 'Crear'
     create:
-      success: 'Genre successfully created.'
+      success: 'Género se ha creado con éxito.'
     edit:
-      title: 'Edit genre'
-      update: 'Update'
+      title: 'Edit género'
+      update: 'Actualizar'
     update:
-      success: 'Genre successfully updated.'
+      success: 'Género se ha actualizado con éxito.'
   songs:
     index:
-      title: 'Songs'
-      confirm: 'You sure?'
-      delete: 'Delete'
-      edit: 'Edit'
-      new: 'New song'
+      title: 'Canciónes'
+      delete: 'Borrar'
+      edit: 'Editar'
+      new: 'Nueva canción'
     new:
-      title: 'New song'
-      create: 'Create'
+      title: 'Nueva canción'
+      create: 'Crear'
     create:
-      success: 'Song successfully created.'
+      success: 'Canción se ha creado con éxito.'
     edit:
-      title: 'Edit song'
-      update: 'Update'
+      title: 'Editar canción'
+      update: 'Actualizar'
     update:
-      success: 'Song successfully updated.'
+      success: 'Canción se ha actualizado con éxito.'
   navbar:
-    songs: "Songs"
-    genres: "Genres"
-    artists: "Artists"
+    songs: "Canciónes"
+    genres: "Géneros"
+    artists: "Cantantes"
     locales: "Languages"
   popup:
-    delete: "Deleting record"
-    warning: "You're doing an action that is irreversible."
-    confirmation: "Are you sure you want to remove?"
+    delete: "Eliminación de registro"
+    warning: "Estás haciendo una acción irreversible."
+    confirmation: "¿Estás seguro?"
+    activerecord:
+      errors:
+        models:
+          artist:
+            attributes:
+              name:
+                blank: "no puede estar en blanco"
+                taken: "ya se ha dado"
+          genre:
+            attributes:
+              name:
+                blank: "no puede estar en blanco"
+                taken: "ya se ha dado"
+          song:
+            attributes:
+              name:
+                blank: "no puede estar en blanco"
