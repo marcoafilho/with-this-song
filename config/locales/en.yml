@@ -11,8 +11,8 @@ en:
         es: "Spanish"
         fr: "French"
         pt_br: "Portuguese"
-    yes: "Yes"
-    no: "No"        
+    "yes": "Yes"
+    "no": "No"        
   artist:
     name: "Name"
   genre:

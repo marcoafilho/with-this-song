@@ -8,8 +8,8 @@ pt_br:
         es: "Espanhol"
         fr: "Frânces"
         pt_br: "Português"
-    yes: "Sim"
-    nonsense: "Não"
+    "yes": "Sim"
+    "no": "Não"
   artist:
     name: "Nome"
   genre:
