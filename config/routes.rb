@@ -2,6 +2,7 @@ WithThisSong::Application.routes.draw do
   resources :artists
   resources :genres
   resources :songs
+  match 'song_provider/:info' => 'song_provider#index'
   
   root to: "songs#index"
   

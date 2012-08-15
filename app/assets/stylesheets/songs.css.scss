@@ -1,3 +1,12 @@
 // Place all the styles related to the Songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.info.icon-play {
+  cursor: pointer;
+  display: table-cell;
+}
+
+.info.icon-play:hover {
+  text-decoration: none;
+}

@@ -12,8 +12,9 @@ en:
         fr: "French"
         pt_br: "Portuguese"
     "yes": "Yes"
-    "no": "No"  
-    select_artist: 'Pick an artist'      
+    "no": "No"
+    loading: Loading  
+    select_artist: 'Pick one or more artists'
   artist:
     name: "Name"
   genre:

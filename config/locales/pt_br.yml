@@ -10,7 +10,8 @@ pt_br:
         pt_br: "Português"
     "yes": "Sim"
     "no": "Não"
-    select_artist: 'Escolha um artista'
+    loading: Carregando
+    select_artist: 'Escolha um ou mais artistas'
   artist:
     name: "Nome"
   genre:

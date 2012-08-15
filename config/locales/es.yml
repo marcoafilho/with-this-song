@@ -9,7 +9,9 @@ es:
         fr: "Francés"
         pt_br: "Portugués"
     "yes": "Sí"
-    "no": "No"        
+    "no": "No"
+    loading: "Cargando"
+    select_artist: 'Elige un o más artistas'        
   artist:
     name: "Nombre"
   genre:

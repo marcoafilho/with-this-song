@@ -6,7 +6,9 @@ class SongsController < ApplicationController
   def show
     @song = Song.find(params[:id])
 
-    render json: @song
+    render json: @song.to_json( 
+                   include: { interpreters: { only: :name }, 
+                              genres: { only: :name } })
   end
 
   def new

@@ -4,10 +4,12 @@
 %table.table.table-striped
   %thead
     %tr
+      %th{ width: "3%" }
+        %span.icon-headphones
       %th.span3
         %span.icon-music
         = t('song.title')
-      %th.span3
+      %th.span2
         %span.icon-user
         = t('song.interpreters')
       %th.span2
@@ -23,6 +25,8 @@
   - @songs.each do |song|
     %tr
       %td
+        %a.info.icon-play{ href: song_path(song) }
+      %td
         = song.title
       %td
         = song.format_artists
@@ -37,3 +41,5 @@
 = will_paginate
 
 = link_to t('.new'), new_song_path, class: "btn btn-primary"
+
+= render "modal_song"

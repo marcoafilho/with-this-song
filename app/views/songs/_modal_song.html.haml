@@ -1,0 +1,34 @@
+#modal-song{ class: "modal hide fade" }
+  %a.modal-header.close
+    &times;
+  .modal-header
+    %h3.song_info_title
+  .modal-body
+    .row
+      .span1
+      .span2
+        %p
+          %b= "#{t('song.album')}: "
+        %p
+          %span.song_info.song_info_album
+        %p
+          %b= "#{t('song.interpreters')}: "
+        %p
+          %span.song_info.song_info_artists
+        %p
+          %b= "#{t('song.genres')}: "
+        %p
+          %span.song_info.song_info_genres
+      .span3
+        %button.btn.loading
+          = "#{t('common.loading')}..."
+        %object{ width: "175", height: "40", classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", id: "gsSong", name: "gsSong" }
+          %param{ name: "movie", value: "http://grooveshark.com/songWidget.swf" }
+          %param{ name: "wmode", value: "window" }
+          %param{ name: "allowScriptAccess", value: "always" }
+          %param{ name: "flashvars", value: "hostname=cowbell.grooveshark.com&songIDs=34307934&style=metal&p=0" }
+          %object{ type: "application/x-shockwave-flash", data: "http://grooveshark.com/songWidget.swf", width: "175", height: "40" }
+            %param{ name: "wmode", value: "window" }
+            %param{ name: "allowScriptAccess", value: "always" }
+            %param{ name: "flashvars", value: "hostname=cowbell.grooveshark.com&songIDs=34307934&style=metal&p=0" }
+    .modal-footer
