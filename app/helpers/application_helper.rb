@@ -25,7 +25,7 @@ module ApplicationHelper
   
   def rating(number, max)
     max.times.collect do |n|
-      if n <= number
+      if n <= number - 1
         content_tag(:span, "", class: "icon-star")
       else
         content_tag(:span, "", class: "icon-star-empty")
