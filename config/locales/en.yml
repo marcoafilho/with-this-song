@@ -25,6 +25,7 @@ en:
     interpreters: "Interpreters"
     album: "Album"
     genres: "Genres"
+    rating: "Rating"
   artists:
     index:
       title: 'Artists'

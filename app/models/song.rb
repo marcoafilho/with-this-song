@@ -15,9 +15,13 @@ class Song < ActiveRecord::Base
   has_many :song_genres
   has_many :genres, through: :song_genres
   
-  attr_accessible :album, :title, :interpreter_ids, :genre_ids
+  attr_accessible :album, :title, :interpreter_ids, :genre_ids, :rating
+  
+  MAX_RATING = 5
+  MIN_RATING = 1
   
   validates :title, presence: true
+  validates :rating, numericality: { only_integer: true, less_than_or_equal_to: MAX_RATING, greater_than_or_equal_to: MIN_RATING }
   
   self.per_page = 15
   

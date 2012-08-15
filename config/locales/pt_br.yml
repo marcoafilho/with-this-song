@@ -22,6 +22,7 @@ pt_br:
     interpreters: "Artista"
     album: "Álbum"
     genres: "Gênero"
+    rating: "Avaliação"
   artists:
     index:
       title: 'Artistas'
@@ -104,5 +105,9 @@ pt_br:
               taken: "não pode haver repetição"
         song:
           attributes:
-            name:
+            title:
               blank: "não pode ficar em branco"
+            rating:
+              not_a_number: "deve ser um número"
+              greater_than_or_equal_to: 'deve ser maior que %{count}'
+              less_than_or_equal_to: 'deve ser menor que %{count}'

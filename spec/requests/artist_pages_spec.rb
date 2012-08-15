@@ -20,7 +20,7 @@ describe "Artist pages" do
         visit artists_path
       end
 
-      it { should have_link('Delete', href: artist_path(Artist.first)) }
+      it { should have_link('Delete', href: artist_path(Artist.order(:name).first)) }
     end
     
     describe "pagination" do

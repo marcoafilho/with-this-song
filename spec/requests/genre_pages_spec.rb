@@ -20,7 +20,7 @@ describe "Genre pages" do
         visit genres_path
       end
 
-      it { should have_link('Delete', href: genre_path(Genre.first)) }
+      it { should have_link('Delete', href: genre_path(Genre.order(:name).first)) }
     end
     
     describe "pagination" do

@@ -59,6 +59,7 @@ describe "Song pages" do
       before do
         fill_in "Title", with: "Someone Like You"
         fill_in "Album", with: "21"
+        fill_in "Rating", with: "5"
       end
 
       it "should create a user" do

@@ -22,4 +22,14 @@ module ApplicationHelper
       form.object.errors.messages[attrs].join(". ").humanize
     end
   end
+  
+  def rating(number, max)
+    max.times.collect do |n|
+      if n <= number
+        content_tag(:span, "", class: "icon-star")
+      else
+        content_tag(:span, "", class: "icon-star-empty")
+      end
+    end.join
+  end
 end

@@ -22,3 +22,8 @@
         = check_box_tag "song[genre_ids][]", genre.id, @song.genres.include?(genre)
         = genre.name
     = error_messages(form, :genre_ids)
+= control_group form, :rating do
+  = form.label :rating, t('song.rating'), class: "control-label"
+  .controls
+    = form.number_field :rating, class: "input-xlarge", in: 1..5
+    = error_messages(form, :rating)

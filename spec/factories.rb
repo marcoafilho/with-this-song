@@ -11,5 +11,6 @@ FactoryGirl.define do
   factory :song do
     sequence(:title) { |n| "Song #{n}" }
     album "Album name"
+    rating 5
   end
 end
