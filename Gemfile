@@ -1,63 +1,46 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '~> 5.0.1'
 
-gem 'haml-rails', '0.3.4'
-gem 'will_paginate', '3.0.3'
-gem 'bootstrap-will_paginate', '0.0.7'
+gem 'sqlite3'
+gem 'puma', '~> 3.0'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.2'
+gem 'jquery-rails'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.5'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', '2.1.1'
+group :development, :test do
+  gem 'byebug', platform: :mri
 end
 
 group :development do
-  gem 'annotate', '2.5.0'
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'haml-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'twitter-bootstrap-rails'
+gem 'rspec-rails'
+gem 'guard-rspec'
+gem 'guard-spork'
+gem 'spork'
 
 group :test do
-	gem 'capybara', '1.1.2'
-	gem 'factory_girl_rails', '4.0.0'
-  gem 'rb-fsevent', '0.9.1', :require => false
-  gem 'growl', '1.0.3'
+	gem 'capybara'
+	gem 'factory_girl_rails'
+  gem 'rb-fsevent', require: false
+  gem 'growl'
 end
-
-group :development, :test do
-	gem 'sqlite3', '1.3.6'
-	gem 'rspec-rails', '2.11.0'
-	gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '1.1.0'
-  gem 'spork', '0.9.2'
-end
-
-group :production do
-	gem 'pg'
-end
-
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
