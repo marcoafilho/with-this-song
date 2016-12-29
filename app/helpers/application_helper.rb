@@ -26,10 +26,10 @@ module ApplicationHelper
   def rating(number, max)
     max.times.collect do |n|
       if n <= number - 1
-        content_tag(:span, "", class: "icon-star")
+        content_tag(:span, '', class: 'fa fa-star')
       else
-        content_tag(:span, "", class: "icon-star-empty")
+        content_tag(:span, '', class: 'fa fa-star-empty')
       end
-    end.join
+    end.join.html_safe
   end
 end

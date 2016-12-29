@@ -1,0 +1,43 @@
+<div id="modal-song" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="song_info_title"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2">
+            <p>
+              <b><%= "#{t('song.album')}: "%></b>
+            </p>
+            <p>
+              <span class="song_info song_info_album"></span>
+            </p>
+            <p>
+              <b><%= "#{t('song.interpreters')}: " %></b>
+            </p>
+            <p>
+              <span class="song_info song_info_artists"></span>
+            </p>
+            <p>
+              <b><%= "#{t('song.genres')}: " %></b>
+            </p>
+            <p>
+              <span class="song_info song_info_genres"></span>
+            </p>
+          </div>
+          <div id="song_player" class="col-xs-3">
+            <button class="btn loading">
+              <%= "#{t('common.loading')}..." %>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

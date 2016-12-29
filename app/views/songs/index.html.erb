@@ -39,9 +39,9 @@
     <% @songs.each do |song| %>
       <tr>
         <td>
-          <a href="song_path(song)" class="info" href:="">
+          <%= link_to song_path(song), class: 'info' do %>
             <i class="fa fa-play"></i>
-          </a>
+          <% end %>
         </td>
         <td>
           <%= song.title %>
@@ -56,7 +56,7 @@
           <%= song.genres.collect(&:name).join("; ") %>
         </td>
         <td>
-          <%=raw rating(song.rating, Song::MAX_RATING) %>
+          <%= rating(song.rating, Song::MAX_RATING) %>
         </td>
         <td>
           <%= link_to t('.edit'), edit_song_path(song), class: 'btn btn-sm' %>

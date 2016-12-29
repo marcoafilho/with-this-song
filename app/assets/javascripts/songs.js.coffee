@@ -3,8 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
   $("#modal-song").modal({ backdrop: true, show: false })
-  $("#gsSong").hide()
-  $(".info").click (e) -> 
+  $(".info").click (e) ->
     e.preventDefault()
     href = $(this).attr('href')
     $.ajax({
@@ -24,8 +23,8 @@ jQuery ->
       $.ajax({
         url: "song_provider/" + info
       }).done (data) ->
-        $("#gsSong param[name='flashvars']").each ->
-          $(this).attr('value', 'hostname=cowbell.grooveshark.com&songIDs=' + data["SongID"] + '&style=metal&p=0')
+        songURI = data["tracks"]["items"][0]["uri"]
+        template = '<iframe src="https://embed.spotify.com/?uri=' + songURI + '&theme=white" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>'
+        $('#song_player').html(template)
         $("#modal-song .loading").hide()
-        $("#gsSong").show()
     $('#modal-song').modal('show')
