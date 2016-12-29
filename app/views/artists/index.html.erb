@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>
+    <%= t('.title') %>
+  </h1>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="span10">
+        <i class="fa fa-user"></i>
+        <%= t('artist.name') %>
+      </th>
+      <th class="span2">
+        <i class="fa fa-wrench"></i>
+        <%= t('common.actions') %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td>
+          <%= artist.name %>
+        </td>
+        <td>
+          <%= link_to t('.edit'), edit_artist_path(artist), class: 'btn btn-secondary btn-sm' %>
+          <%= link_to t('.delete'), artist, class: 'btn btn-sm btn-danger confirm-delete' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div><%= will_paginate %></div>
+<%= link_to t('.new'), new_artist_path, class: 'btn btn-primary' %>

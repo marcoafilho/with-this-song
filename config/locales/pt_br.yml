@@ -81,7 +81,7 @@ pt_br:
     songs: "Músicas"
     genres: "Gêneros"
     artists: "Artistas"
-    locales: "Línguas"
+    locales: "Idiomas"
   popup:
     delete: "Exclusão de registro"
     warning: "Você está executando uma tarefa irreversível."

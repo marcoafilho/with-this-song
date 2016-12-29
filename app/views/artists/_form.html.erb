@@ -1,0 +1,8 @@
+<%= render 'error_messages', object: form.object %>
+<%= form_group form, :name do %>
+  <%= form.label :name, "* #{t('artist.name')}", class: 'col-xs-2 col-form-label' %>
+  <div class="col-xs-10">
+    <%= form.text_field :name, class: 'form-control' %>
+    <%= error_messages(form, :name) %>
+  </div>
+<% end %>

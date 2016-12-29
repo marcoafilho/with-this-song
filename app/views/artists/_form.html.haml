@@ -1,6 +1,0 @@
-= render "shared/error_messages", object: form.object
-= control_group form, :name do
-  = form.label :name, "* #{t('artist.name')}", class: "control-label"
-  .controls
-    = form.text_field :name, class: "input-xlarge"
-    = error_messages(form, :name)

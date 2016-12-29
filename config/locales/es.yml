@@ -11,7 +11,7 @@ es:
     "yes": "Sí"
     "no": "No"
     loading: "Cargando"
-    select_artist: 'Elige un o más artistas'        
+    select_artist: 'Elige un o más artistas'
   artist:
     name: "Nombre"
   genre:
@@ -75,7 +75,7 @@ es:
     songs: "Canciónes"
     genres: "Géneros"
     artists: "Cantantes"
-    locales: "Languages"
+    locales: "Lenguajes"
   popup:
     delete: "Eliminación de registro"
     warning: "Estás haciendo una acción irreversible."

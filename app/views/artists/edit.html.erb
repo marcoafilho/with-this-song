@@ -1,0 +1,10 @@
+<h1><%= t('.title') %></h1>
+<div id="form-container">
+  <%= form_for @artist do |f| %>
+    <%= render 'form', form: f %>
+    <div class="form-actions">
+      <%= f.submit t('.update'), class: 'btn btn-primary' %>
+      <%= link_to t('.cancel'), artists_path, class: 'btn' %>
+    </div>
+  <% end %>
+</div>

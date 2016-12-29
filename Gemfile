@@ -31,8 +31,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 gem 'will_paginate'
-gem 'bootstrap-will_paginate'
-gem 'twitter-bootstrap-rails'
+gem 'will_paginate-bootstrap4'
+gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'font-awesome-rails'
 gem 'rspec-rails'
 gem 'guard-rspec'
 gem 'guard-spork'
@@ -43,4 +44,8 @@ group :test do
 	gem 'factory_girl_rails'
   gem 'rb-fsevent', require: false
   gem 'growl'
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
 end
