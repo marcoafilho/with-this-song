@@ -1,0 +1,10 @@
+<h1><%= t('.title') %></h1>
+<div id="form_container">
+  <%= form_for @song do |f| %>
+    <%= render 'form', form: f %>
+    <div class="form-actions">
+      <%= f.submit t('.create'), class: 'btn btn-primary' %>
+      <%= link_to t('.cancel'), songs_path, class: 'btn' %>
+    </div>
+  <% end %>
+</div>
