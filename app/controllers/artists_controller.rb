@@ -33,7 +33,6 @@ class ArtistsController < ApplicationController
 
   def destroy
     @artist = Artist.find(params[:id]).destroy
-
     redirect_to(artists_path)
   end
 

@@ -3,14 +3,15 @@
     <%= t('.title') %>
   </h1>
 </div>
+
 <table class="table">
   <thead>
     <tr>
-      <th class="span10">
+      <th class="col-xs-10">
         <i class="fa fa-user"></i>
         <%= t('artist.name') %>
       </th>
-      <th class="span2">
+      <th class="col-xs-2">
         <i class="fa fa-wrench"></i>
         <%= t('common.actions') %>
       </th>
@@ -19,10 +20,10 @@
   <tbody>
     <% @artists.each do |artist| %>
       <tr>
-        <td>
+        <td class="col-xs-10">
           <%= artist.name %>
         </td>
-        <td>
+        <td class="col-xs-2">
           <%= link_to t('.edit'), edit_artist_path(artist), class: 'btn btn-secondary btn-sm' %>
           <%= link_to t('.delete'), artist, class: 'btn btn-sm btn-danger confirm-delete' %>
         </td>

@@ -1,0 +1,15 @@
+<%= render 'error_messages', object: form.object %>
+<%= form_group form, :name do %>
+  <%= form.label :name, "* #{t('genre.name')}", class: 'col-xs-2 col-form-label' %>
+  <div class="col-xs-10">
+    <%= form.text_field :name, class: 'form-control' %>
+    <%= error_messages(form, :name) %>
+  </div>
+<% end %>
+<%= form_group form, :description do %>
+  <%= form.label :description, t('genre.description'), class: 'col-xs-2 col-form-label' %>
+  <div class="col-xs-10">
+    <%= form.text_area :description, class: 'form-control', rows: 5 %>
+    <%= error_messages(form, :description) %>
+  </div>
+<% end %>

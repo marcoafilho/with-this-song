@@ -1,0 +1,11 @@
+<% if object.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      <%= t '.error', default: 'The form contains' %>
+      <%= pluralize(object.errors.count, 'error') %>
+      <a href="#" class="close" onclick="$(this).hide">
+        &times;
+      </a>
+    </div>
+  </div>
+<% end %>

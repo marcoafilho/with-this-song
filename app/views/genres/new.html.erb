@@ -1,0 +1,10 @@
+<h1><%= t('.title') %></h1>
+<div id="form-container">
+  <%= form_for @genre do |f| %>
+    <%= render "form", form: f %>
+    <div class="form-actions">
+      <%= f.submit t('.create'), class: 'btn btn-primary' %>
+      <%= link_to t('.cancel'), genres_path, class: 'btn' %>      
+    </div>
+  <% end %>
+</div>
